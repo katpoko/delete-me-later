@@ -1,0 +1,28 @@
+---
+// import base layout 
+import BaseLayout from "../layouts/BaseLayout.astro";
+  // Blog Layout
+import BlogPostLayout from "../layouts/BlogPostLayout.astro";
+
+// import stylesheet
+import '../styles/myStyles.css';
+
+const pageTitle ="About Farmer Kat"
+const professions = ['design', 'manager', 'human', 'digital farmer'];
+---
+
+<BaseLayout pageTitle={pageTitle} >
+
+<h1>{pageTitle}</h1>
+<h2>I am ...
+</h2>
+   
+<ul>
+    {
+        professions.map( job => 
+        
+        <li>{job}</li>
+            
+    )}
+</ul>
+</BaseLayout>
